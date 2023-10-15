@@ -1,8 +1,5 @@
-Banzai
-re bnzai
-
-rere bnzai
-
+BANZAI
+Bc i love banzai
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
