@@ -1,16 +1,25 @@
+// import { IconButton } from '@mui/material'
+// import { Brightness4 as LightIcon } from '@mui/icons-material'
+
+// export const SwitchModeButton = () => {
+//   return (
+//     <IconButton sx={{ ml: 1 }} color="inherit">
+//       <LightIcon />
+//     </IconButton>
+//   )
+// }
 import * as React from 'react'
 import IconButton from '@mui/material/IconButton'
 import Box from '@mui/material/Box'
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles'
 import Brightness4Icon from '@mui/icons-material/Brightness4'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
+// import getDesignTokens from './themes/theme'
+import { ColorModeContext } from '../..colorModeContext/themes/colorModeContext'
 
-import ColorModeContext from './themes/ColorModeContext'
-
-// const ColorModeContext = React.createContext({ toggleColorMode: () => {} })
-
-function SwitchButton() {
+export default function SwitchModeButton() {
   const theme = useTheme()
+  // const ColorModeContext = React.createContext({ toggleColorMode: () => {} })
   const colorMode = React.useContext(ColorModeContext)
   return (
     <Box
@@ -38,35 +47,5 @@ function SwitchButton() {
         )}
       </IconButton>
     </Box>
-  )
-}
-
-export default function ToggleColorMode() {
-  const [mode, setMode] = React.useState('light')
-  const colorMode = React.useMemo(
-    () => ({
-      toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'))
-      },
-    }),
-    []
-  )
-
-  const theme = React.useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode,
-        },
-      }),
-    [mode]
-  )
-
-  return (
-    <ColorModeContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>
-        <SwitchButton />
-      </ThemeProvider>
-    </ColorModeContext.Provider>
   )
 }
