@@ -1,10 +1,10 @@
-import * as React from 'react'
+import { useState, useMemo } from 'react'
 import { createTheme } from '@mui/material/styles'
 import getDesignTokens from './Theme'
 
 export default function ToggleColorMode() {
-  const [mode, setMode] = React.useState('light')
-  const colorMode = React.useMemo(
+  const [mode, setMode] = useState('light')
+  const colorMode = useMemo(
     () => ({
       toggleColorMode: () => {
         setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'))
@@ -22,10 +22,8 @@ export default function ToggleColorMode() {
   //     }),
   //   [mode]
   // )
-  const currentTheme = React.useMemo(
-    () => createTheme(getDesignTokens(mode)),
-    [mode]
-  )
+
+  const currentTheme = useMemo(() => createTheme(getDesignTokens(mode)), [mode])
 
   return {
     theme: currentTheme,
