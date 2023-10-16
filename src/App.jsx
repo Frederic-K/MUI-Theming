@@ -8,6 +8,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles'
 import ColorModeContext from './themes/ColorModeContext'
 import SwitchButton from './components/SwitchButton'
 import getDesignTokens from './themes/Theme'
+import ToggleColorMode from './themes/ToggleColorMode'
 
 // const ColorModeContext = React.createContext({ toggleColorMode: () => {} })
 
@@ -43,27 +44,30 @@ import getDesignTokens from './themes/Theme'
 //   )
 // }
 
-export default function ToggleColorMode() {
-  const [mode, setMode] = React.useState('light')
-  const colorMode = React.useMemo(
-    () => ({
-      toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'))
-      },
-    }),
-    []
-  )
+// export default function ToggleColorMode() {
+//   const [mode, setMode] = React.useState('light')
+//   const colorMode = React.useMemo(
+//     () => ({
+//       toggleColorMode: () => {
+//         setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'))
+//       },
+//     }),
+//     []
+//   )
 
-  // const theme = React.useMemo(
-  //   () =>
-  //     createTheme({
-  //       palette: {
-  //         mode,
-  //       },
-  //     }),
-  //   [mode]
-  // )
-  const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode])
+//   // const theme = React.useMemo(
+//   //   () =>
+//   //     createTheme({
+//   //       palette: {
+//   //         mode,
+//   //       },
+//   //     }),
+//   //   [mode]
+//   // )
+//   const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode])
+export default function App() {
+  const { colorMode, theme } = ToggleColorMode()
+  // console.log('too', colorMode, theme)
 
   return (
     <ColorModeContext.Provider value={colorMode}>
