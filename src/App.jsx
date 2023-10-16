@@ -1,12 +1,13 @@
 import * as React from 'react'
-import IconButton from '@mui/material/IconButton'
-import Box from '@mui/material/Box'
-import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles'
-import Brightness4Icon from '@mui/icons-material/Brightness4'
-import Brightness7Icon from '@mui/icons-material/Brightness7'
+// import IconButton from '@mui/material/IconButton'
+// import Box from '@mui/material/Box'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+// import Brightness4Icon from '@mui/icons-material/Brightness4'
+// import Brightness7Icon from '@mui/icons-material/Brightness7'
 
 import ColorModeContext from './themes/ColorModeContext'
 import SwitchButton from './components/SwitchButton'
+import getDesignTokens from './themes/Theme'
 
 // const ColorModeContext = React.createContext({ toggleColorMode: () => {} })
 
@@ -53,15 +54,16 @@ export default function ToggleColorMode() {
     []
   )
 
-  const theme = React.useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode,
-        },
-      }),
-    [mode]
-  )
+  // const theme = React.useMemo(
+  //   () =>
+  //     createTheme({
+  //       palette: {
+  //         mode,
+  //       },
+  //     }),
+  //   [mode]
+  // )
+  const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode])
 
   return (
     <ColorModeContext.Provider value={colorMode}>

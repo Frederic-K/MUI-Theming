@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { useContext } from 'react'
 import IconButton from '@mui/material/IconButton'
 import Box from '@mui/material/Box'
 import { useTheme } from '@mui/material/styles'
@@ -9,7 +10,7 @@ import ColorModeContext from '../themes/ColorModeContext'
 
 export default function SwitchButton() {
   const theme = useTheme()
-  const colorMode = React.useContext(ColorModeContext)
+  const colorMode = useContext(ColorModeContext)
   return (
     <Box
       sx={{
