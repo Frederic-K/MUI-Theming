@@ -50,5 +50,6 @@ export default function ToggleColorMode() {
   return {
     theme: currentTheme,
     colorMode,
+    mode,
   }
 }

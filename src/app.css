@@ -1,0 +1,22 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+.dark-theme {
+  background-color: #1b2430;
+  color: #f1f1f1;
+}
+.content {
+  width: 80%;
+}
