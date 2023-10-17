@@ -13,17 +13,17 @@ export default function ToggleColorMode() {
     []
   )
 
-  const currentTheme = useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode,
-        },
-      }),
-    [mode]
-  )
+  // const currentTheme = useMemo(
+  //   () =>
+  //     createTheme({
+  //       palette: {
+  //         mode,
+  //       },
+  //     }),
+  //   [mode]
+  // )
 
-  // const currentTheme = useMemo(() => createTheme(getDesignTokens(mode)), [mode])
+  const currentTheme = useMemo(() => createTheme(getDesignTokens(mode)), [mode])
 
   return {
     theme: currentTheme,
