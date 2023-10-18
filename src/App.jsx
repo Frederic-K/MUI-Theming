@@ -14,7 +14,8 @@ export default function App() {
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
-        <div className={`app ${mode === 'dark' && 'dark-theme'}`}>
+        {/* <div className={`app ${mode === 'dark' && 'dark-theme'}`}> */}
+        <Container>
           <div className="content">
             <h1>Hello world!</h1>
             <p>
@@ -27,7 +28,8 @@ export default function App() {
             </p>
             <SwitchButton />
           </div>
-        </div>
+        </Container>
+        {/* </div> */}
       </ThemeProvider>
     </ColorModeContext.Provider>
   )
