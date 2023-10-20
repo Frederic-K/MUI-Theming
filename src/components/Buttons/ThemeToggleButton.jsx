@@ -6,7 +6,7 @@ import { useTheme } from '@mui/material/styles'
 import Brightness4Icon from '@mui/icons-material/Brightness4'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
 
-import ColorModeContext from '../themes/ColorModeContext'
+import ColorModeContext from '../../themes/ColorModeContext'
 
 export default function SwitchButton() {
   const theme = useTheme()
