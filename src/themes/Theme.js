@@ -35,6 +35,11 @@ const getDesignTokens = (mode) => ({
           }),
     },
   },
+
+  //////////////////////////////////
+  // palette: {
+  //   mode,
+  // },
 })
 
 export default getDesignTokens

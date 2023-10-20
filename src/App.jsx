@@ -5,6 +5,9 @@ import ColorModeContext from './themes/ColorModeContext'
 import SwitchButton from './components/SwitchButton'
 import ToggleColorMode from './themes/ToggleColorMode'
 import { Container } from '@mui/material'
+import CssBaseline from '@mui/material/CssBaseline'
+import Switch from '@mui/material/Switch'
+import Button from '@mui/material/Button'
 
 import './app.css'
 
@@ -15,7 +18,8 @@ export default function App() {
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
-        {/* <div className={`app ${mode === 'dark' && 'dark-theme'}`}> */}
+        {/* div className={`app ${mode === 'dark' && 'dark-theme'}`} */}
+        <CssBaseline />
         <Container>
           <div className="content">
             <h1>Hello world!</h1>

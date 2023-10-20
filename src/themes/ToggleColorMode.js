@@ -1,7 +1,14 @@
 import { useState, useMemo } from 'react'
 import { createTheme } from '@mui/material/styles'
 import getDesignTokens from './Theme'
-import { teal } from '@mui/material/colors'
+import {
+  teal,
+  amber,
+  grey,
+  deepOrange,
+  red,
+  lightGreen,
+} from '@mui/material/colors'
 
 export default function ToggleColorMode() {
   const [mode, setMode] = useState('light')
@@ -14,18 +21,18 @@ export default function ToggleColorMode() {
     []
   )
   // Deffault dark mode
-  // const currentTheme = useMemo(
-  //   () =>
-  //     createTheme({
-  //       palette: {
-  //         mode,
-  //       },
-  //     }),
-  //   [mode]
-  // )
+  const defaultTheme = useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode,
+        },
+      }),
+    [mode]
+  )
 
   // Upgrade default dark mode
-  const currentTheme = useMemo(
+  const tealTheme = useMemo(
     () =>
       createTheme({
         palette: {
@@ -39,16 +46,22 @@ export default function ToggleColorMode() {
           secondary: {
             main: '#f5f5f5',
           },
+          ...(mode === 'dark' && {
+            background: {
+              default: lightGreen[900],
+              paper: lightGreen[900],
+            },
+          }),
         },
       }),
     [mode]
   )
 
   // Full custom dark mode
-  // const currentTheme = useMemo(() => createTheme(getDesignTokens(mode)), [mode])
+  const currentTheme = useMemo(() => createTheme(getDesignTokens(mode)), [mode])
 
   return {
-    theme: currentTheme,
+    theme: tealTheme,
     colorMode,
     mode,
   }
