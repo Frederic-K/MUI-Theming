@@ -8,7 +8,7 @@ import Brightness7Icon from '@mui/icons-material/Brightness7'
 
 import ColorModeContext from '../../themes/ColorModeContext'
 
-export default function SwitchButton() {
+export default function ThemeToggleButton() {
   const theme = useTheme()
   const colorMode = useContext(ColorModeContext)
   return (

@@ -1,13 +1,14 @@
 import * as React from 'react'
-import { useState } from 'react'
+// import { useState } from 'react'
 import { ThemeProvider } from '@mui/material/styles'
-import ColorModeContext from './themes/ColorModeContext'
-import ThemeToggleButton from './components/Buttons/ThemeToggleButton'
-import ToggleColorMode from './themes/ToggleColorMode'
 import { Container } from '@mui/material'
+import ColorModeContext from './themes/ColorModeContext'
+import ToggleColorMode from './themes/ToggleColorMode'
 import CssBaseline from '@mui/material/CssBaseline'
-import Switch from '@mui/material/Switch'
-import Button from '@mui/material/Button'
+// import Switch from '@mui/material/Switch'
+// import Button from '@mui/material/Button'
+import ThemeToggleButton from './components/Buttons/ThemeToggleButton'
+import ThemeSwitchButton from './components/Buttons/ThemeSwitchButton'
 
 import './app.css'
 
@@ -32,6 +33,7 @@ export default function App() {
               optio itaque maxime eligendi temporibus magnam pariatur inventore.
             </p>
             <ThemeToggleButton />
+            <ThemeSwitchButton />
           </div>
         </Container>
         {/* </div> */}
