@@ -13,9 +13,10 @@
   width: 100vw;
   height: 100vh;
 }
+.light-theme {
+  background-image: url('./assets/5053309-light.jpg');
+}
 .dark-theme {
-  /* background-color: #1b2430;
-  color: #f1f1f1; */
   background-image: url('./assets/5053309-dark.jpg');
 }
 .content {

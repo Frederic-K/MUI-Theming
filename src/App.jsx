@@ -26,12 +26,14 @@ export default function App() {
         {/* div className={`app ${mode === 'dark' && 'dark-theme'}`} */}
         <Container maxWidth="md">
           <Box
-            sx={{
-              //backgroundImage: './assets/5053309-dark.jpg',
-              bgcolor: teal[300],
-              width: '100vh',
-              height: '100vh',
-            }}
+            sx={
+              {
+                // width: '100vw',
+                // height: '100vh',
+              }
+            }
+            // className={`${mode === 'dark' && 'dark-theme'}`}
+            className={`${mode === 'dark' ? 'dark-theme' : 'light-theme'}`}
           >
             <h1>Hello world!</h1>
             <p>
