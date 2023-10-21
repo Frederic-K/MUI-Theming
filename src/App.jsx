@@ -1,16 +1,19 @@
 import * as React from 'react'
 // import { useState } from 'react'
 import { ThemeProvider } from '@mui/material/styles'
-import { Container } from '@mui/material'
+
 import ColorModeContext from './themes/ColorModeContext'
 import ToggleColorMode from './themes/ToggleColorMode'
 import CssBaseline from '@mui/material/CssBaseline'
 // import Switch from '@mui/material/Switch'
 // import Button from '@mui/material/Button'
+import Container from '@mui/material/Container'
+import Box from '@mui/material/Box'
 import ThemeToggleButton from './components/Buttons/ThemeToggleButton'
 import ThemeSwitchButton from './components/Buttons/ThemeSwitchButton'
 
 import './app.css'
+import { teal } from '@mui/material/colors'
 
 export default function App() {
   const { colorMode, theme, mode } = ToggleColorMode()
@@ -21,8 +24,15 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         {/* div className={`app ${mode === 'dark' && 'dark-theme'}`} */}
-        <Container>
-          <div className="content">
+        <Container maxWidth="md">
+          <Box
+            sx={{
+              //backgroundImage: './assets/5053309-dark.jpg',
+              bgcolor: teal[300],
+              width: '100vh',
+              height: '100vh',
+            }}
+          >
             <h1>Hello world!</h1>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -34,7 +44,7 @@ export default function App() {
             </p>
             <ThemeToggleButton />
             <ThemeSwitchButton />
-          </div>
+          </Box>
         </Container>
         {/* </div> */}
       </ThemeProvider>

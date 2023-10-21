@@ -18,7 +18,7 @@ export default function ThemeToggleButton() {
         width: '100%',
         alignItems: 'center',
         justifyContent: 'center',
-        bgcolor: 'background.default',
+        // bgcolor: 'background.default',
         color: 'text.primary',
         borderRadius: 1,
         p: 3,
