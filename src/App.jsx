@@ -11,6 +11,7 @@ import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
 import ThemeToggleButton from './components/Buttons/ThemeToggleButton'
 import ThemeSwitchButton from './components/Buttons/ThemeSwitchButton'
+import ThemeCustomSwitchBtn from './components/Buttons/ThemeCustomSwitchBtn'
 
 export default function App() {
   const { colorMode, themeName, theme, mode } = ToggleColorMode()
@@ -55,6 +56,7 @@ export default function App() {
             </p>
             <ThemeToggleButton />
             <ThemeSwitchButton />
+            <ThemeCustomSwitchBtn />
           </Box>
         </Container>
       </ThemeProvider>
