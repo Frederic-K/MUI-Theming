@@ -2,8 +2,8 @@ import * as React from 'react'
 // import { useState } from 'react'
 import { ThemeProvider } from '@mui/material/styles'
 
-import ColorModeContext from './themes/ColorModeContext'
-import ToggleColorMode from './themes/ToggleColorMode'
+import ColorModeContext from './styles/themes/ColorModeContext'
+import ToggleColorMode from './styles/themes/ToggleColorMode'
 import CssBaseline from '@mui/material/CssBaseline'
 // import Switch from '@mui/material/Switch'
 // import Button from '@mui/material/Button'
@@ -11,8 +11,6 @@ import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
 import ThemeToggleButton from './components/Buttons/ThemeToggleButton'
 import ThemeSwitchButton from './components/Buttons/ThemeSwitchButton'
-// css
-import './app.css'
 
 export default function App() {
   const { colorMode, themeName, theme, mode } = ToggleColorMode()

@@ -1,17 +1,8 @@
-#root {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-}
-
 /* Name BG with theme's name : i.e. : dark-MyTheme-BG */
 
 .light-techDM-BG {
   /* The image used */
-  background-image: url('./assets/5053309-light.jpg');
+  background-image: url('../../assets/5053309-light.jpg');
   /* Full height */
   height: 100%;
   /* Center and scale the image nicely */
@@ -21,14 +12,11 @@
 }
 .dark-techDM-BG {
   /* The image used */
-  background-image: url('./assets/5053309-dark.jpg');
+  background-image: url('../../assets/5053309-dark.jpg');
   /* Full height */
   height: 100%;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.content {
-  width: 80%;
 }

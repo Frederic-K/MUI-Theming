@@ -4,7 +4,7 @@ import { useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Switch from '@mui/material/Switch'
 
-import ColorModeContext from '../../themes/ColorModeContext'
+import ColorModeContext from '../../styles/themes/ColorModeContext'
 
 export default function ThemeSwitchButton() {
   const theme = useTheme()
