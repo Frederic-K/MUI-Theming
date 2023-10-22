@@ -13,10 +13,12 @@
   width: 100vw;
   height: 100vh;
 }
-.light-theme {
+
+/* Name BG with theme's name : i.e. : dark-MyTheme-BG */
+.light-defaultDM-BG {
   background-image: url('./assets/5053309-light.jpg');
 }
-.dark-theme {
+.dark-defaultDM-BG {
   background-image: url('./assets/5053309-dark.jpg');
 }
 .content {

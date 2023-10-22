@@ -24,16 +24,18 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         {/* div className={`app ${mode === 'dark' && 'dark-theme'}`} */}
-        <Container maxWidth="md">
+        <Container>
           <Box
+            // component="div"
             sx={
               {
-                // width: '100vw',
-                // height: '100vh',
+                // width: '80%',
               }
             }
             // className={`${mode === 'dark' && 'dark-theme'}`}
-            className={`${mode === 'dark' ? 'dark-theme' : 'light-theme'}`}
+            className={`${
+              mode === 'dark' ? `dark-${theme}-BG` : `light-${theme}-BG`
+            }`}
           >
             <h1>Hello world!</h1>
             <p>
