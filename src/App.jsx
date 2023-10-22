@@ -11,33 +11,40 @@ import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
 import ThemeToggleButton from './components/Buttons/ThemeToggleButton'
 import ThemeSwitchButton from './components/Buttons/ThemeSwitchButton'
-
+// css
 import './app.css'
-import { teal } from '@mui/material/colors'
 
 export default function App() {
   const { colorMode, themeName, theme, mode } = ToggleColorMode()
   // const [darkMode, setDarkMode]  = useState(false)
-  console.log('theme', theme)
-  console.log('colorMode', colorMode)
-
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Container
+          component="div"
+          // Full screen :
+          // maxWidth="false" equal to maxWidth="100vw"
+          maxWidth="xl"
+          // Can be set by css
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
           // className={`${mode === 'dark' && 'dark-theme'}`}
           className={`${
             mode === 'dark' ? `dark-${themeName}-BG` : `light-${themeName}-BG`
           }`}
         >
           <Box
-            // component="div"
-            sx={
-              {
-                // width: '80%',
-              }
-            }
+            component="div"
+            sx={{
+              width: '60%',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-start',
+            }}
           >
             <h1>Hello world!</h1>
             <p>

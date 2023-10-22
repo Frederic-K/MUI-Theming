@@ -13,7 +13,13 @@ import {
 
 export default function getDesignTokens(theme, mode) {
   switch (theme) {
-    case 'blueTH':
+    case 'defaultDM':
+      return {
+        palette: {
+          mode,
+        },
+      }
+    case 'techDM':
       return {
         palette: {
           // let mode to de able to call default dark mode if needed
@@ -24,15 +30,6 @@ export default function getDesignTokens(theme, mode) {
           secondary: {
             main: '#f50057',
           },
-          text: {
-            primary: 'rgba(20,26,214,0.87)',
-          },
-        },
-      }
-    case 'defaultDM':
-      return {
-        palette: {
-          mode,
         },
       }
     case 'halloweenDM':
@@ -64,7 +61,7 @@ export default function getDesignTokens(theme, mode) {
           },
         },
       }
-    case 'stpatrickDM':
+    case 'stPatrickDM':
       return {
         palette: {
           mode,
@@ -83,6 +80,22 @@ export default function getDesignTokens(theme, mode) {
               paper: lightGreen[900],
             },
           }),
+        },
+      }
+    case 'blueTH':
+      return {
+        palette: {
+          // let mode to de able to call default dark mode if needed
+          mode,
+          primary: {
+            main: '#1976d2',
+          },
+          secondary: {
+            main: '#f50057',
+          },
+          text: {
+            primary: 'rgba(20,26,214,0.87)',
+          },
         },
       }
     default:

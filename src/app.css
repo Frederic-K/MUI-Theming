@@ -1,11 +1,4 @@
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-.app {
+#root {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,11 +8,26 @@
 }
 
 /* Name BG with theme's name : i.e. : dark-MyTheme-BG */
-.light-defaultDM-BG {
+
+.light-techDM-BG {
+  /* The image used */
   background-image: url('./assets/5053309-light.jpg');
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.dark-defaultDM-BG {
+.dark-techDM-BG {
+  /* The image used */
   background-image: url('./assets/5053309-dark.jpg');
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .content {
   width: 80%;

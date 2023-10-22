@@ -33,7 +33,7 @@ export default function ToggleColorMode() {
   // )
 
   // Theme selector
-  const themeName = 'defaultDM'
+  const themeName = 'techDM'
   const currentTheme = useMemo(
     () => createTheme(getDesignTokens(`${themeName}`, mode)),
     [mode]
