@@ -16,18 +16,19 @@ import './app.css'
 import { teal } from '@mui/material/colors'
 
 export default function App() {
-  const { colorMode, theme, mode } = ToggleColorMode()
+  const { colorMode, themeName, theme, mode } = ToggleColorMode()
   // const [darkMode, setDarkMode]  = useState(false)
+  console.log('theme', theme)
+  console.log('colorMode', colorMode)
 
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        {/* div className={`app ${mode === 'dark' && 'dark-theme'}`} */}
         <Container
           // className={`${mode === 'dark' && 'dark-theme'}`}
           className={`${
-            mode === 'dark' ? `dark-${theme}-BG` : `light-${theme}-BG`
+            mode === 'dark' ? `dark-${themeName}-BG` : `light-${themeName}-BG`
           }`}
         >
           <Box
@@ -51,7 +52,6 @@ export default function App() {
             <ThemeSwitchButton />
           </Box>
         </Container>
-        {/* </div> */}
       </ThemeProvider>
     </ColorModeContext.Provider>
   )
