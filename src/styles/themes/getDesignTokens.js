@@ -1,13 +1,4 @@
-import {
-  amber,
-  deepOrange,
-  grey,
-  teal,
-  red,
-  blue,
-  yellow,
-  lightGreen,
-} from '@mui/material/colors'
+import { amber, deepOrange, grey, teal, lightGreen } from '@mui/material/colors'
 
 // https://zenoo.github.io/mui-theme-creator/
 
@@ -85,7 +76,7 @@ export default function getDesignTokens(theme, mode) {
     case 'blueTH':
       return {
         palette: {
-          // let mode to de able to call default dark mode if needed
+          // let mode to be able to call default dark mode if needed
           mode,
           primary: {
             main: '#1976d2',

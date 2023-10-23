@@ -1,8 +1,10 @@
 import { useContext } from 'react'
 import { styled } from '@mui/material/styles'
 import { useTheme } from '@mui/material/styles'
+
 import Box from '@mui/material/Box'
 import Switch from '@mui/material/Switch'
+
 import ColorModeContext from '../../styles/themes/ColorModeContext'
 
 export default function ThemeCustomSwitchBtn() {
@@ -70,7 +72,7 @@ export default function ThemeCustomSwitchBtn() {
       }}
     >
       {theme.palette.mode} mode
-      <MaterialUISwitch />
+      <MaterialUISwitch onChange={colorMode.toggleColorMode} />
     </Box>
   )
 }
