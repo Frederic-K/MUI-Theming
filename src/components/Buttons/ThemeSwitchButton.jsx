@@ -1,10 +1,12 @@
+// React
 import { useContext } from 'react'
+// React context
+import ColorModeContext from '../../styles/themes/ColorModeContext'
+// MUI
 import { useTheme } from '@mui/material/styles'
-
+import FormControlLabel from '@mui/material/FormControlLabel'
 import Box from '@mui/material/Box'
 import Switch from '@mui/material/Switch'
-
-import ColorModeContext from '../../styles/themes/ColorModeContext'
 
 export default function ThemeSwitchButton() {
   const theme = useTheme()
@@ -22,8 +24,12 @@ export default function ThemeSwitchButton() {
         p: 3,
       }}
     >
-      {theme.palette.mode} mode
-      <Switch onChange={colorMode.toggleColorMode} />
+      <FormControlLabel
+        control={<Switch sx={{ m: 1 }} />}
+        labelPlacement="start"
+        label={`${theme.palette.mode} mode`}
+        onChange={colorMode.toggleColorMode}
+      />
     </Box>
   )
 }

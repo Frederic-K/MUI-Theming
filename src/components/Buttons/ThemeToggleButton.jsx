@@ -1,12 +1,13 @@
-import * as React from 'react'
+// React
 import { useContext } from 'react'
+// React context
+import ColorModeContext from '../../styles/themes/ColorModeContext'
+// MUI
+import { useTheme } from '@mui/material/styles'
 import IconButton from '@mui/material/IconButton'
 import Box from '@mui/material/Box'
-import { useTheme } from '@mui/material/styles'
 import Brightness4Icon from '@mui/icons-material/Brightness4'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
-
-import ColorModeContext from '../../styles/themes/ColorModeContext'
 
 export default function ThemeToggleButton() {
   const theme = useTheme()

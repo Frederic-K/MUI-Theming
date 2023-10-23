@@ -1,12 +1,13 @@
+// React
 import { useContext } from 'react'
+// React context
+import ColorModeContext from '../../styles/themes/ColorModeContext'
+// MUI
 import { styled } from '@mui/material/styles'
 import { useTheme } from '@mui/material/styles'
-
 import FormControlLabel from '@mui/material/FormControlLabel'
 import Box from '@mui/material/Box'
 import Switch from '@mui/material/Switch'
-
-import ColorModeContext from '../../styles/themes/ColorModeContext'
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
