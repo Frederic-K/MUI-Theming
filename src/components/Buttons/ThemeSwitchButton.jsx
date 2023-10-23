@@ -25,7 +25,7 @@ export default function ThemeSwitchButton() {
       }}
     >
       <FormControlLabel
-        control={<Switch sx={{ m: 1 }} />}
+        control={<Switch sx={{ m: 1 }} defaultChecked />}
         labelPlacement="start"
         label={`${theme.palette.mode} mode`}
         onChange={colorMode.toggleColorMode}
