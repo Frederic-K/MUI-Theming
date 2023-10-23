@@ -1,14 +1,12 @@
 import * as React from 'react'
 // import { useState } from 'react'
 import { ThemeProvider } from '@mui/material/styles'
+import CssBaseline from '@mui/material/CssBaseline'
+import Container from '@mui/material/Container'
+import Box from '@mui/material/Box'
 
 import ColorModeContext from './styles/themes/ColorModeContext'
 import ToggleColorMode from './styles/themes/ToggleColorMode'
-import CssBaseline from '@mui/material/CssBaseline'
-// import Switch from '@mui/material/Switch'
-// import Button from '@mui/material/Button'
-import Container from '@mui/material/Container'
-import Box from '@mui/material/Box'
 import ThemeToggleButton from './components/Buttons/ThemeToggleButton'
 import ThemeSwitchButton from './components/Buttons/ThemeSwitchButton'
 import ThemeCustomSwitchBtn from './components/Buttons/ThemeCustomSwitchBtn'
@@ -25,7 +23,6 @@ export default function App() {
           // Full screen :
           // maxWidth="false" equal to maxWidth="100vw"
           maxWidth="xl"
-          // Can be set by css
           sx={{
             display: 'flex',
             flexDirection: 'column',
